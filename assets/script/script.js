@@ -15,6 +15,7 @@ const specialCharacters = [
 // =======================================================================================
 const numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
+
 // Array of lowercase characters to be included in password
 // =======================================================================================
 const lowerCasedCharacters = [
@@ -34,10 +35,11 @@ let upperCasedCharacters = [
 // Setup of variable containers
 
 const passwordMinimumLength = 13; // passwords will always be 13 if user inputs a wrong character.
-let passwordLengthUserInput;
+let passwordLengthUserInput = 13;
 let passwordCapitalLetters;
 let passwordNumbers;
 let passwordSpecialCharacters;
+let passwordArray;
 
 // Function to prompt user for password options
 // =======================================================================================
@@ -76,19 +78,29 @@ console.log(passwordSpecialCharacters)
 
 if (passwordCapitalLetters && passwordNumbers && passwordSpecialCharacters) {
   console.log(`You have opted to have a password with Capital Letters, Numbers and Special Characters \n`);
+  passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters, specialCharacters);
 } else if (!passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
   console.log(`You have opted to not have any Capital Letters, Numbers or Special Characters in the generated password \n`);
+  passwordArray = lowerCasedCharacters;
 } else if (passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
   console.log(`You have opted to have a password with Capital Letters and Special Characters but No Numbers \n`);
+  passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, specialCharacters);
 } else if (passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
   console.log(`You have opted to have Numbers and Capital Letters but no Special Characters password \n`);
+  passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters);
 } else if (!passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
   console.log(`You have opted to have a password with Special Characters but No Numbers or Capital Letters\n`);
+  passwordArray = lowerCasedCharacters.concat(specialCharacters);
 } else if (!passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
   console.log(`You have opted to have Numbers but no Capital Letters or Special Characters set within the generated password \n`);
+  passwordArray = lowerCasedCharacters.concat(numericCharacters);
 }  else if (passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
   console.log(`You have opted to have a password generated with Capital Letters but without Numbers or Special Characters \n`);
+  passwordArray = lowerCasedCharacters.concat(upperCasedCharacters);
 } 
+
+console.log(passwordArray)
+
 
 function getPasswordOptions() {
   console.log("Hello, I am a function declaration called getPasswordOptions.");
@@ -102,20 +114,42 @@ function getPasswordOptions() {
 
 getPasswordOptions()
 
+// Check that UserInput is a number
+
+function checkIndex() {
+  for (let i=0; i< passwordLengthUserInput.length; i++) {
+      if (passwordLengthUserInput < 8 || passwordLengthUserInput > 128) {
+          console.log( ` ${passwordLengthUserInput} is outside of bounds`)
+      } else if (passwordLengthUserInput => 8 || passwordLengthUserInput <= 128){
+          console.log(` ${passwordLengthUserInput } is between 8 and 128`)
+      // i think that the password generator needs a statement to exclude non-numerical values. I intend for the code to default to 13 characters. 
+      } else {
+        console.log( ` ${passwordLengthUserInput} is outside of bounds2`)
+      } 
+  }
+}
+// FUNCTION CALLS (Execution) 
+// =======================================================================================
+
+checkIndex();
+
+
+
 // Function for getting a random element from an array
 // =======================================================================================
 
 
-function getRandom(arr) {
-  console.log("Hello, I am a function declaration called getRandom.");
-  console.log("-----------------------------------");
-  // Return stops the execution of a function
-  return;
-}
+// function getRandom(arr) {
+//   console.log("Hello, I am a function declaration called getRandom.");
+//   console.log("-----------------------------------");
+//   // Return stops the execution of a function
+//   return math.ceil(math.random() * passwordLengthUserInput);
+// }
 
 // Function Execution
 // =======================================================================================
 getRandom()
+
 
 // Function to generate password with user input
 // =======================================================================================
@@ -129,7 +163,10 @@ function generatePassword() {
   return;
 }
 
-
+console.log(passwordArray.find(function(i) {
+  return 
+  let passwordGenerate = passwordGenerate.concat(passwordArray[i])
+}))
 // Function Execution
 // =======================================================================================
 generatePassword()
