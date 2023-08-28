@@ -42,9 +42,15 @@ let passwordSpecialCharacters;
 // Function to prompt user for password options
 // =======================================================================================
 
-passwordLength = prompt(`Let's set the password length \n\n Choose a number between 8 and 128 \n `);
+passwordLengthUserInput = prompt(`Let's set the password length \n\n Choose a number between 8 and 128 \n `);
 
-console.log(passwordLength);
+console.log(passwordLengthUserInput);
+
+if (passwordLengthUserInput != "string") {
+
+} else {
+
+}
 
 passwordCapitalLetters = confirm(`Now, please indicate if you want capital letters to be included: \n 'OK' = Yes, select 'Cancel' for No
 `);
@@ -60,6 +66,22 @@ passwordSpecialCharacters = confirm(`Now, please indicate if you want special ch
 `);
 
 console.log(passwordSpecialCharacters)
+
+if (passwordCapitalLetters && passwordNumbers && passwordSpecialCharacters) {
+  console.log(`You have opted to have a ${passwordLengthUserInput} password with Capital Letters, Numbers and Special Characters \n`);
+} else if (!passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
+  console.log(`You have opted to not have any Capital Letters, Numbers or Special Characters ${passwordLengthUserInput} password \n`);
+} else if (passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
+  console.log(`You have opted to have a ${passwordLengthUserInput} password with Capital Letters and Special Characters but No Numbers \n`);
+} else if (passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
+  console.log(`You have opted to have Numbers and Capital Letters but no Special Characters ${passwordLengthUserInput} password`);
+} else if (!passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
+  console.log(`You have opted to have a ${passwordLengthUserInput} password with Special Characters but No Numbers or Capital Letters\n`);
+} else if (!passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
+  console.log(`You have opted to have Numbers but no Capital Letters or Special Characters ${passwordLengthUserInput} password`);
+}  else if (passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
+  console.log(`You have opted to have Capital Letters ${passwordLengthUserInput} password without Numbers or Special Characters`);
+} 
 
 function getPasswordOptions() {
 
