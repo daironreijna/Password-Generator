@@ -99,6 +99,37 @@ I aim to develop websites that are built mobile first, with accessibility in pri
 
 ## Resources
 
+[Pawel Krawczyk (n.d.) Password Special Characters. The OWASP® Foundation](https://owasp.org/www-community/password-special-characters)
+
+[MDN Web Docs on array instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
+
+[MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
+
+[Joel Olawanle (n.d.) Guide to JavaScript's filter() Method ]( https://stackabuse.com/guide-to-javascripts-filter-method/)
+
+[w3schools (n.d.) JavaScript Hoisting](https://www.w3schools.com/js/js_hoisting.asp)
+
+[W3Schools (n.d.) JavaScript Object Methods](https://www.w3schools.com/js/js_object_methods.asp)
+
+[W3Schools (n.d.) JavaScript For .. In - Loop](https://www.w3schools.com/js/js_loop_forin.asp)
+
+[Stack Overflow (n.d.) How to iterate over a JavaScript object?](https://stackoverflow.com/questions/14379274/how-to-iterate-over-a-javascript-object)
+
+[Stack Overflow (n.d.) Why is using "for...in" for array iteration a bad idea?](https://stackoverflow.com/questions/500504/why-is-using-for-in-for-array-iteration-a-bad-idea)
+
+[MDN Web_docs (n.d.) The for...in statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+[Shahed Nasser (2022) How to Use the for Loop in JavaScript](https://www.sitepoint.com/javascript-for-loop/)
+
+[Jessica Wilkins ( 2021) Learn JavaScript – Free JS Courses for Beginners. freeCodeCamp](https://www.freecodecamp.org/news/learn-javascript-free-js-courses-for-beginners/ "#JAVASCRIPT")
+
+[W3schools (n.d.) JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
+
+[W3schools (n.d.) JavaScript Scope](https://www.w3schools.com/js/js_scope.asp)
+
+[W3schools (n.d.) Object Methods](https://www.w3schools.com/js/js_object_methods.asp)
+
+[MDN Wed Docs (n.d.) Window: prompt() method](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
 
 ## License
 
