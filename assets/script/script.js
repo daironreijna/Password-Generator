@@ -46,11 +46,18 @@ passwordLengthUserInput = prompt(`Let's set the password length \n\n Choose a nu
 
 console.log(passwordLengthUserInput);
 
-if (passwordLengthUserInput != "string") {
+// Creates an array of the values of the object
+console.log(`object values ${Object.values(passwordLengthUserInput)}`)
 
-} else {
+console.log(`object typeof ${typeof Object.values(passwordLengthUserInput)}`)
 
-}
+console.log(`input typeof ${typeof passwordLengthUserInput}`)
+
+// if (passwordLengthUserInput != "string") {
+
+// } else {
+
+// }
 
 passwordCapitalLetters = confirm(`Now, please indicate if you want capital letters to be included: \n 'OK' = Yes, select 'Cancel' for No
 `);
@@ -68,32 +75,47 @@ passwordSpecialCharacters = confirm(`Now, please indicate if you want special ch
 console.log(passwordSpecialCharacters)
 
 if (passwordCapitalLetters && passwordNumbers && passwordSpecialCharacters) {
-  console.log(`You have opted to have a ${passwordLengthUserInput} password with Capital Letters, Numbers and Special Characters \n`);
+  console.log(`You have opted to have a password with Capital Letters, Numbers and Special Characters \n`);
 } else if (!passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
-  console.log(`You have opted to not have any Capital Letters, Numbers or Special Characters ${passwordLengthUserInput} password \n`);
+  console.log(`You have opted to not have any Capital Letters, Numbers or Special Characters in the generated password \n`);
 } else if (passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
-  console.log(`You have opted to have a ${passwordLengthUserInput} password with Capital Letters and Special Characters but No Numbers \n`);
+  console.log(`You have opted to have a password with Capital Letters and Special Characters but No Numbers \n`);
 } else if (passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
-  console.log(`You have opted to have Numbers and Capital Letters but no Special Characters ${passwordLengthUserInput} password`);
+  console.log(`You have opted to have Numbers and Capital Letters but no Special Characters password \n`);
 } else if (!passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
-  console.log(`You have opted to have a ${passwordLengthUserInput} password with Special Characters but No Numbers or Capital Letters\n`);
+  console.log(`You have opted to have a password with Special Characters but No Numbers or Capital Letters\n`);
 } else if (!passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
-  console.log(`You have opted to have Numbers but no Capital Letters or Special Characters ${passwordLengthUserInput} password`);
+  console.log(`You have opted to have Numbers but no Capital Letters or Special Characters set within the generated password \n`);
 }  else if (passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
-  console.log(`You have opted to have Capital Letters ${passwordLengthUserInput} password without Numbers or Special Characters`);
+  console.log(`You have opted to have a password generated with Capital Letters but without Numbers or Special Characters \n`);
 } 
 
 function getPasswordOptions() {
-
+  console.log("Hello, I am a function declaration called getPasswordOptions.");
+  console.log("-----------------------------------");
+  // Return stops the execution of a function
+  return;
 }
+
+// Function Execution
+// =======================================================================================
+
+getPasswordOptions()
 
 // Function for getting a random element from an array
 // =======================================================================================
 
 
 function getRandom(arr) {
-
+  console.log("Hello, I am a function declaration called getRandom.");
+  console.log("-----------------------------------");
+  // Return stops the execution of a function
+  return;
 }
+
+// Function Execution
+// =======================================================================================
+getRandom()
 
 // Function to generate password with user input
 // =======================================================================================
@@ -101,8 +123,16 @@ function getRandom(arr) {
 alert(`Your password has been generated \n \n ${generatePassword}`) // not sure this is correct.
 
 function generatePassword() {
-
+  console.log("Hello, I am a function declaration called generatePassword.");
+  console.log("-----------------------------------");
+  // Return stops the execution of a function
+  return;
 }
+
+
+// Function Execution
+// =======================================================================================
+generatePassword()
 
 // Get references to the #generate element
 // =======================================================================================
@@ -117,7 +147,17 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
+  console.log("Hello, I am a function declaration called writePassword.");
+  console.log("-----------------------------------");
+  // Return stops the execution of a function
+  return;
 }
+
+
+// Function Execution
+// =======================================================================================
+
+writePassword()
 
 // Add event listener to generate button
 // =======================================================================================
