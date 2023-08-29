@@ -41,7 +41,7 @@ function getPasswordOptions() {
   //  Arrays for user input
   //  =======================================
 
-  let passwordLengthUserInput = parseInt(prompt(`\n\t Let's set the password length \n\n Choose a number between 8 and 128 \n `));
+  var passwordLengthUserInput = parseInt(prompt(`\n\t Let's set the password length \n\n Choose a number between 8 and 128 \n `));
   
   if (isNaN(passwordLengthUserInput)) {
     passwordLengthUserInput = 13; // passwords will be 13 characters if user inputs a wrong character.
@@ -71,65 +71,96 @@ function getPasswordOptions() {
 
   if (passwordCapitalLetters && passwordNumbers && passwordSpecialCharacters) {
     alert(`You have opted to have a password with Capital Letters, Numbers and Special Characters \n`);
-    passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters, specialCharacters);
+    var passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters, specialCharacters);
 
     //====================================
 
   } else if (!passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
     alert(`You have opted to not have any Capital Letters, Numbers or Special Characters in the generated password \n`);
-    passwordArray = lowerCasedCharacters;
+    var passwordArray = lowerCasedCharacters;
 
     //====================================
 
   } else if (passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
     alert(`You have opted to have a password with Capital Letters and Special Characters but No Numbers \n`);
-    passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, specialCharacters);
+    var passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, specialCharacters);
 
     //====================================
 
   } else if (passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
     alert(`You have opted to have Numbers and Capital Letters but no Special Characters password \n`);
-    passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters);
+    var passwordArray = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters);
     
     // ===================================
 
   } else if (!passwordCapitalLetters && !passwordNumbers && passwordSpecialCharacters) {
     alert(`You have opted to have a password with Special Characters but No Numbers or Capital Letters\n`);
-    passwordArray = lowerCasedCharacters.concat(specialCharacters);
+    var passwordArray = lowerCasedCharacters.concat(specialCharacters);
 
     // ===================================
 
   } else if (!passwordCapitalLetters && passwordNumbers && !passwordSpecialCharacters) {
     alert(`You have opted to have Numbers but no Capital Letters or Special Characters set within the generated password \n`);
-    passwordArray = lowerCasedCharacters.concat(numericCharacters);
+    var passwordArray = lowerCasedCharacters.concat(numericCharacters);
     
     // ===================================
 
   }  else if (passwordCapitalLetters && !passwordNumbers && !passwordSpecialCharacters) {
     alert(`You have opted to have a password generated with Capital Letters but without Numbers or Special Characters \n`);
-    passwordArray = lowerCasedCharacters.concat(upperCasedCharacters);
+    var passwordArray = lowerCasedCharacters.concat(upperCasedCharacters);
   } 
   // END OF CODE TO POPULATE DATA INTO PASSWORD ARRAY
   
   // Return stops the execution of a function
-  return;
+  return passwordArray;
 }
 
 // Function Execution
 // =======================================================================================
 
-getPasswordOptions()
+// getPasswordOptions()
 
 
 // //!=======================================================================================
 // //! 
 
-// let index = passwordArray.length
-// let randNum = Math.ceil((Math.random()*index))
+// watch this if you want to have a laugh - 
+// dcode (2021) If Math.random() Was a Human - JavaScript - https://www.youtube.com/watch?v=ZjRDkHarB1g
+
+// resource used to assist with this part 
+// Bill Barnum (2019) Random Numbers With Math.random() (Java Tutorial) https://www.youtube.com/watch?v=Q9LIxVENfLU
+// Bro Code (2022) Random number generator in JavaScript 🎲【4 minutes】 https://www.youtube.com/watch?v=UZqSpuUJPa0
+// mrGcoding (2020) JavaScript - Randomize Items In An Array https://www.youtube.com/watch?v=seApG3uwjAs
+
+
+// console.log(passwordArray);
+// console.log(passwordArray.Length - 1);
+
+var tryAgain = getPasswordOptions()
+
+var keys = Object.keys(tryAgain);
+
+console.log(keys)
+console.log(Math.floor(Math.random() * keys.length));
+
+for (var k in tryAgain) {
+  k = Math.floor(Math.random() * keys.length);
+  var tempCharacter = tryAgain[k];
+};
+
+
+// Object.length undefined in javascript [duplicate] - https://stackoverflow.com/questions/30861631/object-length-undefined-in-javascript
+
+// for (var l = 0; l < keys.length; l++) {
+//   var tempCharacter = passwordArray[keys[l]]; 
+//   var randomIndex = Math.floor((Math.random() * passwordLengthUserInput));
+//   passwordArray[j] = passwordArray[randomIndex];
+//   passwordArray[randomIndex] = tempCharacter;
+// };
+
+// let randNum = passwordArray[Math.floor(Math.random()* passwordArray.Length)]
 
 // console.log(randNum)
-
-// console.log(array)
 
 // let index3 = passwordLengthUserInput
 // let array3 = Math.ceil(Math.random()*index3)
