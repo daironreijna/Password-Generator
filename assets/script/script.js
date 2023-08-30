@@ -94,21 +94,21 @@ function generatedPassword() {
   possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
     
   let outputGeneratedPassword = []
-  outputGeneratedPassword = outputGeneratedPassword.push(getRandom(lowerCasedCharacters))
+  outputGeneratedPassword.push(getRandom(lowerCasedCharacters));
 
   if (options.passwordSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
-    outputGeneratedPassword.push(getRandom(specialCharacters))
+    outputGeneratedPassword.push(getRandom(specialCharacters));
   }
   
   if (options.passwordNumbers) {
     possibleCharacters = possibleCharacters.concat(numericCharacters);
-    outputGeneratedPassword.push(getRandom(numericCharacters))
+    outputGeneratedPassword.push(getRandom(numericCharacters));
   }
 
   if (options.passwordCapitalLetters) {
     possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
-    outputGeneratedPassword.push(getRandom(upperCasedCharacters))
+    outputGeneratedPassword.push(getRandom(upperCasedCharacters));
   }
 
   for (let index = 0; index < options.length; index++) {
@@ -124,13 +124,6 @@ function generatedPassword() {
   return result.join("")
 }
 
-/*
-Uncaught TypeError: outputGeneratedPassword.concat is not a function
-    at generatedPassword (script.js:101:55)
-    at script.js:124:1
-generatedPassword @ script.js:101
-(anonymous) @ script.js:124
-*/
 
 generatedPassword()
 
@@ -139,7 +132,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #generate input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatedPassword();
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
