@@ -1,6 +1,6 @@
 # Intermediate JavaScript: Password Generator Challenge
 
-![Project Banner](project-banner.png)
+![Project Banner](./assets/images/02-hero-bg.jpg)
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ This project is part of the Intermediate JavaScript module. In this challenge, I
 
 ## Preview
 
-![App Preview](app-preview.png)
+![App Preview](./assets/images/05-javascript-challenge-demo.png)
 
 ## Motivation
 
@@ -68,7 +68,7 @@ GitHub Repository: [https://github.com/your-username/intermediate-js-password-ge
 2. Click the "Generate Password" button.
 3. Follow the prompts to select password criteria:
    - Length of password (between 8 and 128 characters).
-   - Character types (Lowercase, Uppercase, Numeric, Special characters).
+   - Character types (Uppercase, Numeric, Special characters). Lowercase is set as standard input.
 4. Once all prompts are answered, the generated password will be displayed on the page.
 
 ## Features
@@ -130,6 +130,14 @@ I aim to develop websites that are built mobile first, with accessibility in pri
 [W3schools (n.d.) Object Methods](https://www.w3schools.com/js/js_object_methods.asp)
 
 [MDN Wed Docs (n.d.) Window: prompt() method](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+
+[dcode (2021) If Math.random() Was a Human - JavaScript](https://www.youtube.com/watch?v=ZjRDkHarB1g)
+
+[Bill Barnum (2019) Random Numbers With Math.random() (Java Tutorial)](https://www.youtube.com/watch?v=Q9LIxVENfLU)
+
+[Bro Code (2022) Random number generator in JavaScript 🎲【4 minutes](https://www.youtube.com/watch?v=UZqSpuUJPa0)
+
+[mrGcoding (2020) JavaScript - Randomize Items In An Array](https://www.youtube.com/watch?v=seApG3uwjAs)
 
 ## License
 
